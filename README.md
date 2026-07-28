@@ -62,3 +62,46 @@ MIT — see [LICENSE](LICENSE).
 
 - **Website**: [chaosm.io](https://chaosm.io)
 - **Professional Edition**: ¥9,999 CNY / $1,399 USD (perpetual license, 90-day free updates)
+
+---
+
+## 中文简介
+
+ChaosOps 是**自托管的 AI 运维平台**——监控你的服务器、出问题自动告警、AI 帮你分析修复，数据全在你自己手里。
+
+**免费版（本仓库）**包含：
+- 📊 监控：CPU / 内存 / 磁盘 / 网络 / HTTP 探活 / 进程 / 负载 / 磁盘 IO / 服务状态 / 连接数
+- 🚨 告警：规则引擎（JSON DSL / PromQL）、状态机、静默、抑制、去重
+- 📋 事件：全生命周期 + 时间线，告警自动聚合
+- 📧 通知：邮件、钉钉、企业微信、飞书、Slack、通用 Webhook（中英双语模板）
+- 🖥️ 节点管理：一键安装 Agent（Linux / Windows / ARM），自动更新+失败回滚
+- 👥 多用户权限：管理员 / 查看者
+- 🌐 中英双语界面
+
+**专业版 / 企业版**（见 [chaosm.io](https://chaosm.io)）增加 AI 根因分析、自愈执行、远程批量执行、开放 API 等。
+
+### 快速开始
+
+**Linux**（Ubuntu 20.04+ / Debian 11+ / CentOS 7+）：
+
+```bash
+tar -xzf chaosops-free-v0.1.0-linux-x86_64.tar.gz
+cd chaosops-free-v0.1.0-linux-x86_64
+sudo ./install-server.sh
+```
+
+打开 `http://你的服务器IP:8000`，用安装时生成的管理员账号登录（密码保存在 `server/.env`）。
+
+**Windows**：以管理员身份运行 `bin\chaosops-installer.exe`。
+
+**Docker**：
+
+```bash
+docker load -i chaosops-free-docker-v0.1.0.tar.gz
+docker run -d -p 8000:8000 -v chaosops-data:/opt/chaosops/data chaosops-free:v0.1.0
+```
+
+### 链接
+
+- **官网**：[chaosm.io](https://chaosm.io)
+- **专业版**：¥9,999 买断（含 90 天免费更新）
