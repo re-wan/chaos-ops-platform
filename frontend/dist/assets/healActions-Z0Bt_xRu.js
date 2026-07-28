@@ -1,0 +1,2 @@
+import{v as e}from"./index-BFFUf0kr.js";async function s(a){return(await e.get("/v1/heal-actions",{params:{}})).data}async function o(a){return(await e.post("/v1/heal-actions",a)).data}async function c(a){await e.delete(`/v1/heal-actions/${a}`)}async function i(a){return(await e.post(`/v1/heal-actions/${a}/approve`)).data}export{i as a,o as c,c as d,s as g};
+//# sourceMappingURL=healActions-Z0Bt_xRu.js.map

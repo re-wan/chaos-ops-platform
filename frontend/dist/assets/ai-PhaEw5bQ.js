@@ -1,0 +1,2 @@
+import{v as n}from"./index-BFFUf0kr.js";async function o(){return(await n.get("/v1/ai/config")).data}async function i(a){return(await n.put("/v1/ai/config",a)).data}async function r(a){return(await n.post(`/v1/ai/analyze/${a}`,void 0,{timeout:12e4})).data}async function c(a){return(await n.get(`/v1/ai/jobs/${a}`)).data}async function p(){return(await n.get("/v1/ai/rate-status")).data}async function u(a,s){return(await n.post(`/v1/ai/confirm/${a}`,s)).data}export{r as a,o as b,u as c,p as d,c as g,i as u};
+//# sourceMappingURL=ai-PhaEw5bQ.js.map

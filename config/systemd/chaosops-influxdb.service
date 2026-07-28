@@ -1,0 +1,17 @@
+[Unit]
+Description=ChaosOps InfluxDB
+After=network.target
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=chaosops
+Group=chaosops
+WorkingDirectory=/opt/chaosops/influxdb
+ExecStart=/opt/chaosops/influxdb/bin/influxd --bolt-path=/opt/chaosops/influxdb/data/influxd.bolt --engine-path=/opt/chaosops/influxdb/data/engine --http-bind-address=127.0.0.1:8086
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

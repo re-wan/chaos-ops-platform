@@ -1,0 +1,21 @@
+[Unit]
+Description=ChaosOps Server
+After=network.target chaosops-influxdb.service
+# 弱依赖：InfluxDB 为可选组件（默认 METRIC_BACKEND_TYPE=sqlite），influxdb 未安装/
+# 被停用时不得连停 server。
+Wants=chaosops-influxdb.service
+StartLimitIntervalSec=300
+StartLimitBurst=3
+
+[Service]
+Type=simple
+User=chaosops
+Group=chaosops
+WorkingDirectory=/opt/chaosops/server
+EnvironmentFile=-/opt/chaosops/server/.env
+ExecStart=/opt/chaosops/server/.venv/bin/uvicorn app.main:app --host 0.0.0.0 --port 8000
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

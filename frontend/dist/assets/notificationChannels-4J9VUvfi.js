@@ -1,0 +1,2 @@
+import{v as t}from"./index-BFFUf0kr.js";async function o(n){return(await t.get("/v1/notification-channels",{params:n})).data}async function s(n){return(await t.post("/v1/notification-channels",n)).data}async function c(n,a){return(await t.put(`/v1/notification-channels/${n}`,a)).data}async function r(n){await t.delete(`/v1/notification-channels/${n}`)}async function f(n,a){return(await t.post(`/v1/notification-channels/${n}/test`,{})).data}export{s as c,r as d,o as g,f as t,c as u};
+//# sourceMappingURL=notificationChannels-4J9VUvfi.js.map

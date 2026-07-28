@@ -1,0 +1,2 @@
+import{v as a}from"./index-BFFUf0kr.js";async function o(){return(await a.get("/v1/license")).data}async function r(){return(await a.get("/v1/license/features")).data}async function i(e){const n=new FormData;return n.append("file",e),(await a.post("/v1/license/upload",n,{headers:{"Content-Type":"multipart/form-data"}})).data}export{o as a,r as g,i as u};
+//# sourceMappingURL=license-C14ngNHU.js.map

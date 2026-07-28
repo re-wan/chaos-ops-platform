@@ -1,0 +1,2 @@
+import{E as i,y as c}from"./index-BFFUf0kr.js";function m(e,a=c.global.t("common.actionFailed")){var r,o,t,n;const s=e;return(o=(r=s.response)==null?void 0:r.data)!=null&&o.detail?s.response.data.detail:(n=(t=s.response)==null?void 0:t.data)!=null&&n.message?s.response.data.message:s.message?s.message:a}function l(e,a=c.global.t("common.actionFailed")){const s=m(e,a);i.error(s)}function u(e){i.success(e)}export{u as a,m as e,l as s};
+//# sourceMappingURL=error-bWHYgcmn.js.map

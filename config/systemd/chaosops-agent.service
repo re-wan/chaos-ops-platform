@@ -1,0 +1,18 @@
+[Unit]
+Description=ChaosOps Agent
+After=network.target
+StartLimitIntervalSec=300
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=chaosops-agent
+Group=chaosops-agent
+WorkingDirectory=/opt/chaosops-agent
+EnvironmentFile=-/opt/chaosops-agent/config.env
+ExecStart=/opt/chaosops-agent/.venv/bin/python -m agent.app.main --config-dir /opt/chaosops-agent
+Restart=always
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target
