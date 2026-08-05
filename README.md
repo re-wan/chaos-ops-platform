@@ -2,7 +2,7 @@
 
 > Open-source free edition. Monitor your servers, get alerted, and let AI help you fix problems — all on your own infrastructure.
 
-[![License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![License](https://img.shields.io/badge/license-AGPL--3.0-blue.svg)](LICENSE)
 [![Python](https://img.shields.io/badge/python-3.10+-blue.svg)](https://www.python.org/)
 
 ## What is ChaosOps?
@@ -25,8 +25,8 @@ ChaosOps is a self-hosted server monitoring and operations platform. It watches 
 ### Linux (Ubuntu 20.04+ / Debian 11+ / CentOS 7+)
 
 ```bash
-tar -xzf chaosops-free-v0.1.0-linux-x86_64.tar.gz
-cd chaosops-free-v0.1.0-linux-x86_64
+tar -xzf chaosops-free-v1.0.0-linux-x86_64.tar.gz
+cd chaosops-free-v1.0.0-linux-x86_64
 sudo ./install-server.sh
 ```
 
@@ -36,32 +36,24 @@ Open `http://your-server-ip:8000` and log in with the generated admin credential
 
 Run `bin\chaosops-installer.exe` as Administrator.
 
-### Docker
-
-```bash
-docker load -i chaosops-free-docker-v0.1.0.tar.gz
-docker run -d -p 8000:8000 -v chaosops-data:/opt/chaosops/data chaosops-free:v0.1.0
-```
-
 ## Architecture
 
 Single Server + multiple Agents:
 - **Server**: FastAPI backend, alert engine, incident center, notifications, web console (Vue 3)
 - **Agent**: Deployed on monitored hosts, collects metrics and executes healing actions
 
-## Documentation
+## Downloads
 
-- [Quick Start Guide](docs/QUICKSTART.md)
-- [Troubleshooting](docs/TROUBLESHOOTING.md)
+See [Releases](https://github.com/re-wan/chaos-ops-platform/releases) for the latest packages (Linux x86_64 / ARM64).
 
 ## License
 
-MIT — see [LICENSE](LICENSE).
+AGPL-3.0 — see [LICENSE](LICENSE).
 
 ## Links
 
 - **Website**: [chaosm.io](https://chaosm.io)
-- **Professional Edition**: ¥9,999 CNY / $1,399 USD (perpetual license, 90-day free updates)
+- **Professional Edition**: $1,399 USD (perpetual license, 90-day free updates)
 
 ---
 
@@ -85,8 +77,8 @@ ChaosOps 是**自托管的 AI 运维平台**——监控你的服务器、出问
 **Linux**（Ubuntu 20.04+ / Debian 11+ / CentOS 7+）：
 
 ```bash
-tar -xzf chaosops-free-v0.1.0-linux-x86_64.tar.gz
-cd chaosops-free-v0.1.0-linux-x86_64
+tar -xzf chaosops-free-v1.0.0-linux-x86_64.tar.gz
+cd chaosops-free-v1.0.0-linux-x86_64
 sudo ./install-server.sh
 ```
 
@@ -94,14 +86,8 @@ sudo ./install-server.sh
 
 **Windows**：以管理员身份运行 `bin\chaosops-installer.exe`。
 
-**Docker**：
-
-```bash
-docker load -i chaosops-free-docker-v0.1.0.tar.gz
-docker run -d -p 8000:8000 -v chaosops-data:/opt/chaosops/data chaosops-free:v0.1.0
-```
-
 ### 链接
 
 - **官网**：[chaosm.io](https://chaosm.io)
-- **专业版**：¥9,999 买断（含 90 天免费更新）
+- **专业版**：$1,399 美元买断（含 90 天免费更新）
+
